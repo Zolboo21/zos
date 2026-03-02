@@ -1,0 +1,35 @@
+EDA SUMMARY
+============================================================
+
+Total transactions: 5,000,000
+Unique customers: 100,000
+Unique accounts: 100,000
+Date range: 2023-01-01 00:07:00 to 2024-12-30 23:59:00
+Total amount: 328,109,942,600 NGN
+
+Transaction type:
+  debit: 3,250,541 (65.0%)
+  credit: 1,749,459 (35.0%)
+
+Channel:
+  mobile: 1,749,043 (35.0%)
+  pos: 1,501,370 (30.0%)
+  atm: 999,469 (20.0%)
+  web: 500,493 (10.0%)
+  branch: 149,372 (3.0%)
+  ussd: 75,336 (1.5%)
+  agent: 24,917 (0.5%)
+
+Status:
+  success: 4,599,963 (92.0%)
+  failed: 349,765 (7.0%)
+  pending: 40,383 (0.8%)
+  reversed: 9,889 (0.2%)
+
+Avg transactions per customer: 50.0
+Median amount: 13,300 NGN
+Mean amount: 65,622 NGN
+Max amount: 5,000,000 NGN
+
+Balance inconsistent rows: 346,733
+Amount outliers: 398,964
