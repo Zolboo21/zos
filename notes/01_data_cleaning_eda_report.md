@@ -175,3 +175,22 @@ Merchant data is only available for 40% of transactions (2M rows). Among known m
 4. **Balance inconsistencies** (6.93%) should be handled carefully — either filtered out or treated as a separate signal (possible indicator of risky transactions).
 
 5. **Amount outliers** (8%) are a meaningful segment, not noise — they represent large transfers that may indicate business accounts or high-value customers.
+
+---
+
+## 6. Plots Reference
+
+All plots saved to `output/`:
+
+| File | Description |
+|---|---|
+| `01_monthly_volume.png` | Monthly transaction count and total amount over time |
+| `02_type_status_dist.png` | Pie charts of transaction type and status |
+| `03_channel_dist.png` | Horizontal bar chart of channel distribution |
+| `04_amount_dist.png` | Amount histogram + log-scale distribution |
+| `05_hourly_pattern.png` | Transaction count and avg amount by hour |
+| `06_dow_pattern.png` | Transaction count by day of week |
+| `07_top_states.png` | Top 15 states by transaction count |
+| `08_top_merchants.png` | Top 15 merchants by transaction count |
+| `09_customer_activity.png` | Transactions and spend per customer distributions |
+| `10_failed_txn_analysis.png` | Failure rate by channel and by hour |

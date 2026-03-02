@@ -166,3 +166,14 @@ The two methods sometimes rank features very differently. Key discrepancies:
 3. **For churn modeling:** Recency, count trend (recent vs. prior 3 months), and transaction failure rates are the most actionable churn indicators. A customer whose recency is growing, trend is declining, and failure rate is rising is at high risk.
 
 4. **Feature reduction:** The bottom 30 features collectively contribute less SHAP importance than `frequency` alone. For production models, the top 20–25 features are likely sufficient, reducing complexity without sacrificing accuracy.
+
+---
+
+## 6. Plots Reference
+
+| File | Description |
+|---|---|
+| `11_feature_importance_lgbm.png` | Top 25 features by LightGBM gain and split count |
+| `12_shap_importance_bar.png` | Top 25 features by mean absolute SHAP value |
+| `13_shap_beeswarm.png` | SHAP beeswarm plot — shows direction and magnitude of feature effects |
+| `feature_importance_table.csv` | Full ranking table with gain, split count, SHAP, and ranks |
