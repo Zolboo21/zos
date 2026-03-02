@@ -1,1 +1,1 @@
-Never access this directory
+This subdirectory is only for writing after the user confirms that a task is validated and ready to be written/consolidated into a notebook. In otherwords, this is not a place for experimenting or testing.
