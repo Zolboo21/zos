@@ -1,0 +1,50 @@
+TIME SERIES PREDICTIVE MODEL SUMMARY
+============================================================
+
+Task: Predict next-month transaction count per customer
+Granularity: customer x month
+Model: LightGBM (gradient boosted trees)
+Features: 47 (lags, rolling, seasonal, static customer)
+Train: months 7–21 (Jul 2023 – Sep 2024), 1,500,000 rows
+Test:  months 22–23 (Oct – Nov 2024), 200,000 rows
+Best iteration: 92
+
+PERFORMANCE:
+  MAE:  0.924
+  RMSE: 5.665
+  R²:   0.9190
+  MAPE: 56.4%
+
+BASELINE (lag-1 naive):
+  MAE:  1.126
+  R²:   0.9905
+  Model improvement: 17.9% MAE reduction
+
+TOP 20 FEATURES BY GAIN:
+   1. roll_6m_count_mean             gain= 1,039,780,666
+   2. lag_1_count                    gain=   895,805,324
+   3. lag_2_count                    gain=   857,988,665
+   4. credit_count                   gain=   677,001,421
+   5. pending_count                  gain=   489,722,581
+   6. debit_count                    gain=   460,452,373
+   7. txn_count                      gain=   369,678,505
+   8. roll_3m_count_mean             gain=   353,865,068
+   9. reversed_count                 gain=   201,120,468
+  10. roll_3m_count_std              gain=   176,510,543
+  11. lag_3_count                    gain=   160,969,900
+  12. lag_6_count                    gain=    90,188,081
+  13. weekend_count                  gain=     6,081,464
+  14. failed_count                   gain=     2,945,232
+  15. monetary_median                gain=     2,196,351
+  16. std_hour                       gain=     1,851,704
+  17. avg_balance_before             gain=     1,563,709
+  18. outlier_txn_ratio              gain=     1,346,008
+  19. count_diff_3m                  gain=     1,000,524
+  20. dow_entropy                    gain=       867,479
+
+PERFORMANCE BY ACTIVITY SEGMENT:
+  Inactive (0)         n= 83,023  actual=0.70  pred=0.73  MAE=0.68
+  Low (1-2)            n= 87,233  actual=1.01  pred=1.04  MAE=0.79
+  Medium (3-5)         n= 20,332  actual=2.38  pred=2.45  MAE=1.23
+  High (6-10)          n=  5,569  actual=6.02  pred=6.13  MAE=2.02
+  Very High (>10)      n=  3,832  actual=32.99  pred=33.25  MAE=4.50
